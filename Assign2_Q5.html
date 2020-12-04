@@ -1,0 +1,42 @@
+<!--
+Q. 5 Write a JavaScript program to add items in an blank array and display the items.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 5 Solution</title>
+    <script>
+        var x = 0;
+        var arr = [];
+
+        function add_ele_arr() {
+            arr[x] = document.getElementById("t1").value;
+            
+            x++;
+            document.getElementById("t1").value = "";
+        }
+
+        function disp_arr() {
+            var ele = "<hr/>";
+
+            for (var y = 0; y < arr.length; y++) {
+                ele += "Element " + y + " = " + arr[y] + "<br/>";
+            }
+            document.getElementById("Res").innerHTML = ele;
+        }
+
+    </script>
+</head>
+
+<body>
+    <input type="text" id="t1"></input>
+    <input type="button" id="button1" value="Add" onclick="add_ele_arr();"></input>
+    <input type="button" id="button2" value="Display" onclick="disp_arr();"></input>
+    <div id="Res"></div>
+
+</body>
+
+</html>
